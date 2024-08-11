@@ -1,8 +1,9 @@
 import os
 import time
+from second import *
 
 
-directoryPath = r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Intrari'
+directoryPath = r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Entries'
 def FirstTry():
     if  not os.listdir(directoryPath):
         print('There are no files. Auto-Checking after 1 min ')
@@ -26,6 +27,7 @@ def CheckingFileExist ():
         TimeCheck()
     else:
         print('Files were found in the folder. Uploading the data.')
+        FilesInterpreter()
 
 
 FirstTry()
