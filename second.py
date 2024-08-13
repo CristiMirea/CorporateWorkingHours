@@ -5,6 +5,7 @@ import shutil
 
 directoryPath = r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Entries' + '\\'
 BackupEntries=r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Backup_Entries' + '\\'
+
 def FilesInterpreter():
     dir_list = os.listdir(directoryPath)
     for file in dir_list:
