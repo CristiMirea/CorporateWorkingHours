@@ -1,6 +1,6 @@
 import os
 import time
-from second import *
+from TimeTrack import *
 
 
 directoryPath = r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Entries'
@@ -10,10 +10,11 @@ def FirstTry():
         TimeCheck()
     else:
         print('Files were found in the folder. Uploading the data.')
+        FilesInterpreter()
 
 def TimeCheck():
     timetocheck=0
-    while timetocheck<10:
+    while timetocheck<10:   #chnage with how many second you want
         time.sleep(1)
         timetocheck+=1
     else:
