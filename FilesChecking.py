@@ -1,6 +1,6 @@
 import os
 import time
-from TimeTrack import *
+from TimeTrack import FilesInterpreter
 
 
 directoryPath = r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Entries'
@@ -14,12 +14,12 @@ def FirstTry():
 
 def TimeCheck():
     timetocheck=0
-    while timetocheck<10:   #chnage with how many second you want
+    while timetocheck < 10:   #change with how many second you want
         time.sleep(1)
         timetocheck+=1
-    else:
-        timetocheck=0
-        CheckingFileExist()
+    
+    timetocheck=0
+    CheckingFileExist()
         
         
 def CheckingFileExist (): 
