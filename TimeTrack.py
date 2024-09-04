@@ -55,9 +55,11 @@ def FilesInterpreter():
 
         except  sqlite3.OperationalError as error:
                 tkinter.messagebox.showinfo(title='DataBase error', message=error)
+                window.destroy()
 
         except  Exception as e:
                 tkinter.messagebox.showinfo(title='Error', message=str(e))
+                window.destroy()
                 
         
         finally: 
@@ -70,7 +72,7 @@ def FilesInterpreter():
             if conn:
                 conn.close()
     calculate_work_time(rezultat)
-    window.destroy() 
+
 
 
 

@@ -4,6 +4,8 @@ import tkinter.messagebox
 import sqlite3
 import smtplib, ssl
 from CreateDatabase import Managers
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 
 database=r"C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Project_ITSchool_SQL_05.06\AccessGate.db"
@@ -13,7 +15,7 @@ window = tkinter.Tk()
 window.wm_withdraw()
 
 def EndDay():
-    start_hour= '20:49:00'
+    start_hour= '14:41:00'
     while True:
         now = datetime.now()
         current_time = now.strftime("%H:%M:%S")
@@ -36,24 +38,36 @@ def DayReport():
             if real_hour < 8:
                 manager_ID=str(lista[2])
                 receiver_email=Managers[manager_ID]
-                # print(receiver_email)
-
-                port = 465  # For SSL
+                first_name=lista[0]
+                last_name=lista[1]
+                data=date.today()
+                to_email = receiver_email
+                from_email = "cristian.mirea.mc@gmail.com"
+                subject = "Daily Report"
                 smtp_server = "smtp.gmail.com"
-                sender_email = "cristian.mirea.mc@gmail.com"  # Enter your address
-                password='auio rool jpii xpjn' #email password
+                smtp_port = 587
+                smtp_password = "kuio rool jpii xpjn"
+                body = f"""Hello, \nThe employee {first_name} {last_name} has not completed 8 hours of work on {data}."""
+                msg = MIMEMultipart()
+                msg['From'] = from_email
+                msg['To'] = to_email
+                msg['Subject'] = subject
+                msg.attach(MIMEText(body, 'plain'))
+                server = smtplib.SMTP(smtp_server, smtp_port)
+                server.starttls()  # Secure the connection
+                server.login(from_email, smtp_password)
+
+                # Send the email
+                server.sendmail(from_email, to_email, msg.as_string())
+                server.quit()
 
 
-                context = ssl.create_default_context()
-                with smtplib.SMTP_SSL(smtp_server, port, context=context) as server:
-                    server.login(sender_email, password)
-                    server.sendmail(sender_email, 'cristian.mirea.mc@gmailcom', f'Hello, \n The employee {lista[0]} {lista[1]} has not completed 8 hours of work on {date.today()}. ')
-
-            
+               
 
     except  OverflowError as error:
             tkinter.messagebox.showinfo(title='Alert', message=error)
             window.destroy()
 
-# EndDay()
-DayReport()
+EndDay()
+# DayReport()
+ 
