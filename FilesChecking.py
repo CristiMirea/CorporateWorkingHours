@@ -31,7 +31,6 @@ def CheckingFileExist ():
         FilesInterpreter()
 
 
-FirstTry()
 
 
 

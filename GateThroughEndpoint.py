@@ -5,6 +5,7 @@ from CreateDatabase import database
 
 
 
+
 app= Flask(__name__)
 
 
@@ -53,7 +54,7 @@ def Add_Gate():
         except Exception as e:
             return jsonify({"error": str(e)}), 400
         
-        
+     
     return jsonify({"responses": "Attendace table was updated"}), 201
 
 
