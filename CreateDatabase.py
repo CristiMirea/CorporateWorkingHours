@@ -3,6 +3,7 @@ import sqlite3
 import random
 import tkinter as tk
 import tkinter.messagebox
+from FilesChecking import FirstTry
 
 database=r"C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Project_ITSchool_SQL_05.06\AccessGate.db"
 window = tkinter.Tk()
@@ -39,6 +40,7 @@ def TodayEmployees ():
     finally:
         if conn in locals():
             conn.close() 
+    FirstTry()
         
         
 # Variable to hold the second input
@@ -82,7 +84,7 @@ def secondquestion():
     # Start the new application's main loop
     new_window.mainloop()
 if __name__ == "__main__":
-# Create the main application window
+# main application window
     root = tk.Tk()
     root.title("Company time tracker")
 
