@@ -32,7 +32,7 @@ def Calculate_work_time():
             # Clean up the last in time for this employee
                 del last_in_time[emp_id]
     
-    # Convert work time from seconds to a readable format (HH:MM:SS)
+    # Convert work time from seconds to a readable format 
         for emp_id in work_time:
             total_seconds = work_time[emp_id]
             hours = total_seconds // 3600
@@ -48,7 +48,6 @@ def Calculate_work_time():
     cursor=conn.cursor()
     try:
         for id, timp in work_time.items():
-            # print(type(id),type(timp))
             cursor.execute(f'UPDATE Employees SET TIME = "{timp}" WHERE ID={id};')
             conn.commit()
         if cursor:

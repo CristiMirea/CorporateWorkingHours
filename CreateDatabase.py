@@ -45,8 +45,8 @@ def TodayEmployees ():
 second_input = None
 
 def firstquestion():
-    global first_answer  # Use the global variable
-    first_answer = entry.get()  # Get the input from the entry widget
+    global first_answer  
+    first_answer = entry.get()  
     
     # Close the current window
     root.destroy()
@@ -58,25 +58,24 @@ def secondquestion():
     new_window = tk.Tk()
     new_window.title('Company time tracker')
 
-    # Create a label for asking a question above the entry widget
+   
     question_label = tk.Label(new_window, text="Please add the company name:")
-    question_label.pack(pady=(10, 5))  # Adding some padding
+    question_label.pack(pady=(10, 5))  
 
-    # Create an entry widget for the second user input
+    
     new_entry = tk.Entry(new_window)
     new_entry.pack(pady=10)
 
-    # Create a function to save the second input
+    
     def submit_second_answer():
-        global second_answer  # Use the global variable
-        second_answer = new_entry.get()  # Get the input from the new entry widget
-        # print("Second Input:", second_input)  # Print or save the second input
-        new_window.destroy()  # Close the new window
+        global second_answer  
+        second_answer = new_entry.get()  
+        new_window.destroy()  
         TodayEmployees()
         
         
 
-    # Create a submit button for the new window
+   
     submit_button = tk.Button(new_window, text="Submit", command=submit_second_answer, width=50, height=10)
     submit_button.pack(pady=20)
 
