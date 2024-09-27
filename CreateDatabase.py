@@ -5,14 +5,14 @@ import tkinter as tk
 import tkinter.messagebox
 from FilesChecking import FirstTry
 
-database=r"C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Project_ITSchool_SQL_05.06\AccessGate.db"
+database=r"C:\Users\AccessGate.db"
 window = tkinter.Tk()
 window.wm_withdraw()
 
 
-Managers={"10":"cristian.mirea.mc@gmail.com",
-          "11": "cristian.mirea.mc@gmail.com",
-          "12": "cristian.mirea.mc@gmail.com"
+Managers={"10":"manager1_email@gmail.com",
+          "11": "manager2_email@gmail.com",
+          "12": "manager3_email@gmail.com"
         }
 
 def TodayEmployees ():
