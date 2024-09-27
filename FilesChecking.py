@@ -3,7 +3,7 @@ import time
 from TimeTrack import FilesInterpreter
 
 
-directoryPath = r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Entries'
+directoryPath = r'C:\Users\Entries'
 def FirstTry():
     if  not os.listdir(directoryPath):
         print('There are no files. Auto-Checking after 1 min ')
