@@ -6,9 +6,9 @@ import tkinter.messagebox
 import sqlite3
 from datetime import *
 
-database=r"C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Project_ITSchool_SQL_05.06\AccessGate.db"
-directoryPath = r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Entries' + '\\'
-BackupEntries=r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Backup_Entries' + '\\'
+database=r"C:\Users\AccessGate.db"
+directoryPath = r'C:\Users\Entries' + '\\'
+BackupEntries=r'C:\Users\Backup_Entries' + '\\'
 
 
 def FilesInterpreter():
