@@ -10,8 +10,8 @@ from email.mime.multipart import MIMEMultipart
 from Help_File import *
 
 
-BackupEntries=r'C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Python\Leasons\MainProject\MainProject\Backup_Entries' + '\\'
-database=r"C:\Users\CristianMirea\OneDrive - RightClick Solutions, B.V\Desktop\SQL\Project_ITSchool_SQL_05.06\AccessGate.db"
+BackupEntries=r'C:\Users\Backup_Entries' + '\\'
+database=r"C:\Users\AccessGate.db"
 conn=sqlite3.connect(database, timeout=10.0)
 cursor=conn.cursor()
 window = tkinter.Tk()
